@@ -1,0 +1,20 @@
+{
+  "name": "cv-intersog",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "vetalxpro <vetalpro.exe@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^6.0.0"
+  }
+}

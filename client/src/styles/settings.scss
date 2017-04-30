@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: inherit;
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-wrapper {
+    padding: 5px 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    min-height: 100%;
+}
+
+.content {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}

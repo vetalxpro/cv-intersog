@@ -1,0 +1,24 @@
+-
+    var skills = [
+    'HTML, CSS',
+    'Javascript(ES6+, Typescript, Node.js)',
+    'OOP',
+    'Angular 2,',
+    'React + Redux',
+    'Webpack, Gulp',
+    'MongoDB, SQL',
+    'Pug(exJade), Handlebars, ejs',
+    'Express.js',
+    'Git'
+    ];
+
+section.section.section-skills
+    .container-fluid
+        .row
+            .col-md-3
+                h3.section__title Skills
+            .col-md-9
+                .section__content
+                    ul.skills__list
+                        each skill in skills
+                            li.skills__list-item=skill

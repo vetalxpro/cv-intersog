@@ -1,0 +1,32 @@
+.section {
+    background-color: $bg-color;
+    padding: 0 20px;
+    .container-fluid {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border;
+    }
+    &__text {
+        padding: 5px 0;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    &__link {
+        transition: all 0.3s;
+    }
+}
+
+.section-skills {
+    .skills__list {
+        .skills__list-item {
+            margin-bottom: 10px;
+            &::before {
+                content: '\F00C';
+                font-family: FontAwesome, sans-serif;
+                margin-right: 5px;
+                color: $dark-blue
+            }
+        }
+    }
+}
