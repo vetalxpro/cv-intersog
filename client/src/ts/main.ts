@@ -1,6 +1,7 @@
 import '../styles/style.scss';
-import '../img/sprite.png';
 
 import { particles } from './modules/particles';
 
-particles('particles').init();
+if (window.outerWidth > 1300) {
+  particles('particles').init();
+}

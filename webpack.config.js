@@ -23,7 +23,9 @@ const config = {
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new CheckerPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: false
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './client/src/html/pug/index.pug')
     }),
@@ -48,7 +50,10 @@ const config = {
         ],
         use: extractCSS.extract({
           use: [{
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              minimize: true
+            }
           }, {
             loader: 'postcss-loader',
             options: {
@@ -70,7 +75,10 @@ const config = {
         include: path.join(__dirname, './client/src'),
         use: extractCSS.extract({
           use: [{
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              minimize: true
+            }
           }, {
             loader: 'postcss-loader',
             options: {

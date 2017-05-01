@@ -5,7 +5,7 @@ export function particles(canvasId) {
       backgroundColor: '#1b212d',
       defaultSpeed: 0.1,
       addedSpeed: 1,
-      particleAmount: 20,
+      particleAmount: 30,
       iconDiameter: 50,
       iconSpriteCount: 4
     },
@@ -64,7 +64,7 @@ export function particles(canvasId) {
   }
 
   function init() {
-    sprite.src = '/assets/img/sprite.png';
+    sprite.src = require('../../img/sprite.png');
     sprite.onload = () => {
       resize();
       for (let i = 0; i < options.particleAmount; i++) {
@@ -80,14 +80,14 @@ export function particles(canvasId) {
     context.fillRect(0, 0, w, h);
     const particlesLength = particles.length;
     for (let i = 0; i < particlesLength; i++) {
-      particles[ i ].update();
       particles[ i ].draw();
+      particles[ i ].update();
     }
     window.requestAnimationFrame(loop);
   }
 
   canvasElement.addEventListener('click', (e) => {
-    particles.push(new Particle(e.pageX, e.pageY));
+    particles.push(new Particle(e.clientX, e.clientY));
   });
   window.addEventListener('resize', resize);
 

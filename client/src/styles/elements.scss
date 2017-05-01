@@ -1,0 +1,22 @@
+.link {
+    transition: all 0.3s;
+
+    &:hover {
+
+        text-decoration: none;
+    }
+    &_white {
+        color: $light-gray;
+        &:hover {
+            color: darken($light-gray, 20%);
+        }
+        &:active, &:focus {
+            color: darken($light-gray, 20%);
+        }
+    }
+}
+
+.fa {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
