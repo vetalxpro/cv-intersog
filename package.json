@@ -7,8 +7,8 @@
     "node": "6.10.2"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "start": "webpack && node server/bin/www.js",
+    "postinstall": "bower install && webpack",
+    "start": "node server/bin/www.js",
     "build": "webpack",
     "devserver": "webpack-dev-server"
   },
