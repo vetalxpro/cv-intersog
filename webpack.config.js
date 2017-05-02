@@ -6,6 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractCSS = new ExtractTextPlugin({
   filename: "assets/css/[name].css",
+  allChunks: true,
   disable: process.env.NODE_ENV === "development"
 });
 
@@ -52,7 +53,8 @@ const config = {
           use: [{
             loader: 'css-loader',
             options: {
-              minimize: true
+              minimize: true,
+              sourceMap: false
             }
           }, {
             loader: 'postcss-loader',
@@ -64,7 +66,7 @@ const config = {
                   })
                 ]
               },
-              sourceMap: false
+              sourceMap: true
             }
           }],
           fallback: 'style-loader'
@@ -77,7 +79,8 @@ const config = {
           use: [{
             loader: 'css-loader',
             options: {
-              minimize: true
+              minimize: true,
+              sourceMap: false
             }
           }, {
             loader: 'postcss-loader',
@@ -89,7 +92,7 @@ const config = {
                   })
                 ]
               },
-              sourceMap: false
+              sourceMap: true
             }
           }, {
             loader: 'resolve-url-loader',
