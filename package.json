@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "start": "node server/bin/www.js",
+    "start": "webpack && node server/bin/www.js",
     "build": "webpack",
     "devserver": "webpack-dev-server"
   },
